@@ -91,16 +91,25 @@
         </div>
     </header>
 
-    <main id="top">
+    <main id="top" class="page">
+        <svg class="route" aria-hidden="true">
+            <path id="route-path" fill="none" stroke="rgba(165, 199, 132, 0.4)" stroke-width="1.5" stroke-dasharray="6 6" stroke-linecap="round"></path>
+        </svg>
         <section class="hero">
-            <div class="container">
+            <div class="container above">
                 <div>
-                    <span class="eyebrow">Центр психологического развития в Гродно</span>
+                    <div class="eyebrow-row">
+                        <span class="eyebrow">Центр психологического развития в Гродно</span>
+                        <span class="route-dot route-dot-inline" data-route-dot></span>
+                    </div>
                     <h1>Пространство, где разбираются в себе — не в одиночку</h1>
                     <p class="lede">Индивидуальные консультации и программы развития для детей и взрослых. Первый шаг — звонок или сообщение в Telegram, дальше мы берём разговор на себя.</p>
                     <div class="hero-actions">
                         <a href="tel:+375297819849" class="btn btn-primary">Позвонить</a>
-                        <a href="https://t.me/+375297819849" class="btn btn-ghost">Написать в Telegram</a>
+                        <span class="hero-second">
+                            <a href="https://t.me/+375297819849" class="btn btn-ghost">Написать в Telegram</a>
+                            <span class="route-dot route-dot-ghost" data-route-dot></span>
+                        </span>
                     </div>
                     <p class="hero-note">Перезвоним и ответим на вопросы о формате работы.</p>
                 </div>
@@ -117,73 +126,127 @@
         </section>
 
         <section id="about">
-            <div class="container about-grid">
+            <div class="container about-grid above">
                 <div class="about-photo-wrap">
                     <img src="images/larisa.jpeg" width="900" height="1125" alt="Глазкова Лариса, детский и семейный психолог в Гродно">
                 </div>
                 <div>
                     <span class="eyebrow">Обо мне</span>
-                    <h2>Глазкова Лариса</h2>
+                    <div class="name-row">
+                        <h2>Глазкова Лариса</h2>
+                        <span class="route-dot route-dot-inline" data-route-dot></span>
+                    </div>
                     <p class="lede">Психолог высшей категории, основатель центра «Ступени развития». Более 20 лет я помогаю детям и взрослым справляться с эмоциональными трудностями, обретать уверенность и выстраивать гармоничные отношения.</p>
                     <p style="color: var(--muted); margin-top: 16px;">В своей практике я опираюсь на доказательные и бережные методы: когнитивно-поведенческую терапию, песочную и арт-терапию, а также элементы психоанализа. Я постоянно совершенствую свои навыки, выступая участником международных конференций, и являюсь автором множества статей и книги по психологии и педагогике детства.</p>
                 </div>
             </div>
         </section>
 
-        <section id="services">
+        <section id="services" class="services">
             <div class="container">
-                <div class="section-intro center">
+                <div class="services-intro above">
                     <span class="eyebrow">Услуги</span>
-                    <h2>Направления и программы</h2>
+                    <div class="services-title">
+                        <h2>Направления и программы</h2>
+                        <span class="route-dot route-dot-anchor" data-route-dot></span>
+                    </div>
                     <p class="lede">Выберите подходящий формат. Мы пройдём этот путь вместе.</p>
                 </div>
-                <div class="services-grid">
-                    <article class="service-card">
-                        <img src="images/mum.jpeg" width="1200" height="800" alt="Программа «Хорошо рядом с мамой» для детей 2–3 лет">
-                        <div class="service-card-body">
-                            <h3>«Хорошо рядом с мамой»</h3>
-                            <p>Для детей 2–3 лет. Развитие высших психических функций, мелкой моторики рук, речи и творческих способностей.</p>
-                            <span class="service-price">40 минут · 20 BYN</span>
+                <div class="services-stack">
+                    <article class="route-card route-card-start route-layout-col">
+                        <div class="route-card-face"></div>
+                        <div class="route-card-inner">
+                            <div class="route-card-copy">
+                                <div class="route-title route-title-right">
+                                    <span class="route-dot" data-route-dot></span>
+                                    <h3>«Хорошо рядом с мамой»</h3>
+                                </div>
+                                <p>Для детей 2–3 лет. Развитие высших психических функций, мелкой моторики рук, речи и творческих способностей.</p>
+                                <span class="service-price">40 минут · 20 BYN</span>
+                            </div>
+                            <div class="route-card-media route-media-fixed">
+                                <img src="images/mum.jpeg" width="1200" height="800" alt="Программа «Хорошо рядом с мамой» для детей 2–3 лет">
+                            </div>
                         </div>
                     </article>
-                    <article class="service-card">
-                        <img src="images/sand.jpeg" width="1200" height="800" alt="Песочная терапия «Волшебный мир песка» в Гродно">
-                        <div class="service-card-body">
-                            <h3>«Волшебный мир песка»</h3>
-                            <p>Для детей 2–12 лет. Стимуляция интеллектуальных и творческих процессов, преодоление негативных эмоций.</p>
-                            <span class="service-price">30 минут · 15 BYN</span>
+                    <article class="route-card route-card-end route-card-shift-lg route-layout-row">
+                        <div class="route-card-face"></div>
+                        <div class="route-card-inner">
+                            <div class="route-card-copy">
+                                <div class="route-title route-title-left">
+                                    <span class="route-dot" data-route-dot></span>
+                                    <h3>«Волшебный мир песка»</h3>
+                                </div>
+                                <p>Для детей 2–12 лет. Стимуляция интеллектуальных и творческих процессов, преодоление негативных эмоций.</p>
+                                <span class="service-price">30 минут · 15 BYN</span>
+                            </div>
+                            <div class="route-card-media">
+                                <img src="images/sand.jpeg" width="1200" height="800" alt="Песочная терапия «Волшебный мир песка» в Гродно">
+                            </div>
                         </div>
                     </article>
-                    <article class="service-card">
-                        <img src="images/better.jpeg" width="1200" height="800" alt="Программа «Я лучше, чем вчера» для детей 5–10 лет">
-                        <div class="service-card-body">
-                            <h3>«Я лучше, чем вчера»</h3>
-                            <p>Для детей 5–10 лет. Гармонизация эмоций (тревожности, страхов, агрессии), коррекция поведения, улучшение внимания.</p>
-                            <span class="service-price">45–60 минут · от 20 BYN</span>
+                    <article class="route-card route-card-start route-card-shift route-layout-row-reverse">
+                        <div class="route-card-face"></div>
+                        <div class="route-card-inner">
+                            <div class="route-card-copy">
+                                <div class="route-title route-title-right">
+                                    <span class="route-dot" data-route-dot></span>
+                                    <h3>«Я лучше, чем вчера»</h3>
+                                </div>
+                                <p>Для детей 5–10 лет. Гармонизация эмоций (тревожности, страхов, агрессии), коррекция поведения, улучшение внимания.</p>
+                                <span class="service-price">45–60 минут · от 20 BYN</span>
+                            </div>
+                            <div class="route-card-media">
+                                <img src="images/better.jpeg" width="1200" height="800" alt="Программа «Я лучше, чем вчера» для детей 5–10 лет">
+                            </div>
                         </div>
                     </article>
-                    <article class="service-card">
-                        <img src="images/emotions.jpeg" width="1200" height="800" alt="Программа «Я и мои эмоции» для детей 4–5 лет">
-                        <div class="service-card-body">
-                            <h3>«Я и мои эмоции»</h3>
-                            <p>Для детей 4–5 лет. Развитие интеллекта и эмоций, коррекция поведения, развитие коммуникативных навыков.</p>
-                            <span class="service-price">45 минут · 20 BYN</span>
+                    <article class="route-card route-card-end route-card-shift-lg route-layout-col-reverse">
+                        <div class="route-card-face"></div>
+                        <div class="route-card-inner">
+                            <div class="route-card-copy">
+                                <div class="route-title route-title-left">
+                                    <span class="route-dot" data-route-dot></span>
+                                    <h3>«Я и мои эмоции»</h3>
+                                </div>
+                                <p>Для детей 4–5 лет. Развитие интеллекта и эмоций, коррекция поведения, развитие коммуникативных навыков.</p>
+                                <span class="service-price">45 минут · 20 BYN</span>
+                            </div>
+                            <div class="route-card-media route-media-fixed">
+                                <img src="images/emotions.jpeg" width="1200" height="800" alt="Программа «Я и мои эмоции» для детей 4–5 лет">
+                            </div>
                         </div>
                     </article>
-                    <article class="service-card">
-                        <img src="images/consult.jpeg" width="1200" height="800" alt="Индивидуальная консультация психолога в Гродно">
-                        <div class="service-card-body">
-                            <h3>Индивидуальные консультации</h3>
-                            <p>Работа с детьми (занятия и диагностика) и взрослыми. Индивидуальный подход к решению психологических запросов.</p>
-                            <span class="service-price">50–60 минут · от 40 до 60 BYN</span>
+                    <article class="route-card route-card-start route-card-shift route-layout-row">
+                        <div class="route-card-face"></div>
+                        <div class="route-card-inner">
+                            <div class="route-card-copy">
+                                <div class="route-title route-title-right">
+                                    <span class="route-dot" data-route-dot></span>
+                                    <h3>Индивидуальные консультации</h3>
+                                </div>
+                                <p>Работа с детьми (занятия и диагностика) и взрослыми. Индивидуальный подход к решению психологических запросов.</p>
+                                <span class="service-price">50–60 минут · от 40 до 60 BYN</span>
+                            </div>
+                            <div class="route-card-media">
+                                <img src="images/consult.jpeg" width="1200" height="800" alt="Индивидуальная консультация психолога в Гродно">
+                            </div>
                         </div>
                     </article>
-                    <article class="service-card">
-                        <img src="images/marathon.jpeg" width="1200" height="800" alt="Марафон «Я автор своей жизни» для взрослых">
-                        <div class="service-card-body">
-                            <h3>Марафон «Я автор своей жизни»</h3>
-                            <p>Для взрослых. Осознание ценности своей жизни, расстановка приоритетов. Поиск себя, осознание своих возможностей.</p>
-                            <span class="service-price">6 встреч по 90 мин · 45 BYN</span>
+                    <article class="route-card route-card-end route-card-shift-lg route-layout-col">
+                        <div class="route-card-face"></div>
+                        <div class="route-card-inner">
+                            <div class="route-card-copy">
+                                <div class="route-title route-title-left">
+                                    <span class="route-dot" data-route-dot></span>
+                                    <h3>Марафон «Я автор своей жизни»</h3>
+                                </div>
+                                <p>Для взрослых. Осознание ценности своей жизни, расстановка приоритетов. Поиск себя, осознание своих возможностей.</p>
+                                <span class="service-price">6 встреч по 90 мин · 45 BYN</span>
+                            </div>
+                            <div class="route-card-media route-media-fixed">
+                                <img src="images/marathon.jpeg" width="1200" height="800" alt="Марафон «Я автор своей жизни» для взрослых">
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -261,5 +324,6 @@
         </div>
     </footer>
     <script src="js/menu.js"></script>
+    <script src="js/path.js"></script>
 </body>
 </html>
