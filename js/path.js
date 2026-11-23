@@ -1,5 +1,5 @@
 (function () {
-    var page = document.querySelector(".page");
+    var page = document.getElementById("top");
     var path = document.getElementById("route-path");
     if (!page || !path) return;
 

@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Onest:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/utilities.css">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -45,7 +46,7 @@
     </script>
 </head>
 <body>
-    <header class="site-header">
+    <header class="site-header relative z-50">
         <div class="header-top">
             <div class="container header-top-row">
                 <div class="header-phones">
@@ -57,26 +58,27 @@
                     <a href="viber://chat?number=%2B375297819849" class="messenger-btn" aria-label="Написать в Viber">
                         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4c4.4 0 7.5 2.9 7.5 7.2 0 4-2.8 6.9-6.8 7.1l-2.9 2.2v-2.6C6.3 17.2 4.5 14.5 4.5 11.2 4.5 6.9 7.6 4 12 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.3 9.6c1.6 3.2 2.9 4.4 5.9 5.9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
                     </a>
-                    <a href="https://t.me/+375297819849" class="messenger-btn" aria-label="Написать в Telegram">
+                    <a href="https://t.me/+375297819849" target="_blank" rel="noopener noreferrer" class="messenger-btn" aria-label="Написать в Telegram">
                         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4 3 11l5.2 2m11.8-9-3 15-6-4.5M8.2 13l3 6.5v-4l-3-2.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container nav-row">
-            <a href="./" class="logo-block">
+        <div class="container nav-row relative">
+            <a href="#top" class="logo-block">
                 <span class="logo-title">Центр «Ступени развития»</span>
                 <span class="logo-sub">Глазкова Лариса — центр оказания психологической помощи</span>
             </a>
             <nav class="main-nav" aria-label="Основная навигация">
                 <a href="#about">Обо мне</a>
                 <a href="#services">Услуги</a>
-                <a href="#process">Как записаться</a>
+                <a href="#process">Как проходит запись</a>
+                <a href="#reviews">Отзывы</a>
                 <a href="#contact">Контакты</a>
                 <a href="offer/">Оферта</a>
             </nav>
             <div class="header-actions">
-                <a class="btn btn-primary" href="tel:+375297819849">Позвонить</a>
+                <a class="btn btn-primary" href="#contact">Оставить заявку</a>
                 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Открыть меню">
                     <span></span><span></span><span></span>
                 </button>
@@ -85,35 +87,37 @@
         <div id="mobile-nav" class="mobile-nav-dropdown">
             <a href="#about">Обо мне</a>
             <a href="#services">Услуги</a>
-            <a href="#process">Как записаться</a>
+            <a href="#process">Как проходит запись</a>
+            <a href="#reviews">Отзывы</a>
             <a href="#contact">Контакты</a>
             <a href="offer/">Оферта</a>
         </div>
     </header>
 
-    <main id="top" class="page">
-        <svg class="route" aria-hidden="true">
+    <main id="top" class="relative overflow-hidden">
+        <svg class="absolute inset-0 w-full h-full pointer-events-none z-10" style="overflow: visible" aria-hidden="true">
             <path id="route-path" fill="none" stroke="rgba(165, 199, 132, 0.4)" stroke-width="1.5" stroke-dasharray="6 6" stroke-linecap="round"></path>
         </svg>
+
         <section class="hero">
-            <div class="container above">
+            <div class="container relative z-20">
                 <div>
-                    <div class="eyebrow-row">
-                        <span class="eyebrow">Центр психологического развития в Гродно</span>
-                        <span class="route-dot route-dot-inline" data-route-dot></span>
+                    <div class="flex items-center gap-3 mb-6 relative z-30">
+                        <span class="eyebrow" style="margin-bottom: 0">Центр психологического развития</span>
+                        <div class="w-2.5 h-2.5 bg-[#6FAE3E] rounded-full shrink-0 shadow-sm" data-route-dot></div>
                     </div>
-                    <h1>Пространство, где разбираются в себе — не в одиночку</h1>
-                    <p class="lede">Индивидуальные консультации и программы развития для детей и взрослых. Первый шаг — звонок или сообщение в Telegram, дальше мы берём разговор на себя.</p>
-                    <div class="hero-actions">
-                        <a href="tel:+375297819849" class="btn btn-primary">Позвонить</a>
-                        <span class="hero-second">
-                            <a href="https://t.me/+375297819849" class="btn btn-ghost">Написать в Telegram</a>
-                            <span class="route-dot route-dot-ghost" data-route-dot></span>
-                        </span>
+                    <h1 class="relative z-30 bg-transparent pointer-events-none">Пространство, где разбираются в себе — не в одиночку</h1>
+                    <p class="lede relative z-30 pointer-events-none">Индивидуальные консультации и программы развития для детей и взрослых. Первый шаг — короткая заявка, дальше мы берём разговор на себя.</p>
+                    <div class="hero-actions flex flex-wrap gap-4 items-center relative z-30">
+                        <a href="#contact" class="btn btn-primary">Оставить заявку</a>
+                        <div class="relative">
+                            <a href="#services" class="btn btn-ghost">Что мы делаем</a>
+                            <div class="absolute -right-12 top-1/2 w-2 h-2 opacity-0" data-route-dot></div>
+                        </div>
                     </div>
-                    <p class="hero-note">Перезвоним и ответим на вопросы о формате работы.</p>
+                    <p class="hero-note relative z-30 mt-4 pointer-events-none">Перезвоним и ответим на все вопросы о формате работы.</p>
                 </div>
-                <div class="breath-wrap" aria-hidden="true">
+                <div class="breath-wrap relative z-20" aria-hidden="true">
                     <svg viewBox="0 0 200 200">
                         <circle class="breath-ring" cx="100" cy="100" r="90" fill="none" stroke="#6FAE3E" stroke-width="1.5" opacity=".25"/>
                         <circle class="breath-ring" cx="100" cy="100" r="68" fill="none" stroke="#6FAE3E" stroke-width="1.5" opacity=".4"/>
@@ -126,15 +130,15 @@
         </section>
 
         <section id="about">
-            <div class="container about-grid above">
-                <div class="about-photo-wrap">
-                    <img src="images/larisa.jpeg" width="900" height="1125" alt="Глазкова Лариса, детский и семейный психолог в Гродно">
+            <div class="container about-grid relative z-20">
+                <div class="about-photo-wrap relative z-30">
+                    <img src="images/photo.jpeg" alt="Глазкова Лариса — детский психолог" class="about-photo">
                 </div>
-                <div>
+                <div class="relative z-30 pointer-events-none">
                     <span class="eyebrow">Обо мне</span>
-                    <div class="name-row">
-                        <h2>Глазкова Лариса</h2>
-                        <span class="route-dot route-dot-inline" data-route-dot></span>
+                    <div class="flex items-center gap-3 mb-4">
+                        <h2 style="font-size: 32px; margin: 0">Глазкова Лариса</h2>
+                        <div class="w-2.5 h-2.5 bg-[#6FAE3E] rounded-full shrink-0 shadow-sm relative z-30" data-route-dot></div>
                     </div>
                     <p class="lede">Психолог высшей категории, основатель центра «Ступени развития». Более 20 лет я помогаю детям и взрослым справляться с эмоциональными трудностями, обретать уверенность и выстраивать гармоничные отношения.</p>
                     <p style="color: var(--muted); margin-top: 16px;">В своей практике я опираюсь на доказательные и бережные методы: когнитивно-поведенческую терапию, песочную и арт-терапию, а также элементы психоанализа. Я постоянно совершенствую свои навыки, выступая участником международных конференций, и являюсь автором множества статей и книги по психологии и педагогике детства.</p>
@@ -142,110 +146,116 @@
             </div>
         </section>
 
-        <section id="services" class="services">
-            <div class="container">
-                <div class="services-intro above">
-                    <span class="eyebrow">Услуги</span>
-                    <div class="services-title">
-                        <h2>Направления и программы</h2>
-                        <span class="route-dot route-dot-anchor" data-route-dot></span>
+        <section id="services" class="py-24">
+            <div class="container mx-auto px-4 relative">
+                <div class="text-center mb-16 md:mb-24 max-w-2xl mx-auto relative z-30">
+                    <span class="eyebrow block mb-4">Услуги</span>
+                    <div class="relative inline-block">
+                        <h2 style="font-size: 40px">Направления и программы</h2>
+                        <div class="absolute -right-8 top-1/2 w-2 h-2 opacity-0" data-route-dot></div>
                     </div>
-                    <p class="lede">Выберите подходящий формат. Мы пройдём этот путь вместе.</p>
+                    <p class="lede">Выберите подходящий формат. Мы пройдем этот путь вместе.</p>
                 </div>
-                <div class="services-stack">
-                    <article class="route-card route-card-start route-layout-col">
-                        <div class="route-card-face"></div>
-                        <div class="route-card-inner">
-                            <div class="route-card-copy">
-                                <div class="route-title route-title-right">
-                                    <span class="route-dot" data-route-dot></span>
-                                    <h3>«Хорошо рядом с мамой»</h3>
+
+                <div class="flex flex-col gap-12 lg:gap-0 relative">
+                    <article class="w-full lg:w-[48%] lg:self-start relative group">
+                        <div class="absolute inset-0 bg-white rounded-[2rem] shadow-sm border border-[#E9EFE3] group-hover:shadow-md transition-shadow z-0"></div>
+                        <div class="relative z-20 p-6 md:p-8 flex flex-col gap-8">
+                            <div class="w-full flex flex-col justify-center">
+                                <div class="flex items-center gap-4 mb-4 relative flex-row-reverse">
+                                    <div class="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[#6FAE3E] rounded-full border-4 border-white shadow-sm z-30 -right-6" data-route-dot></div>
+                                    <h3 class="text-[30px] leading-[1.2] font-bold flex-1">«Хорошо рядом с мамой»</h3>
                                 </div>
-                                <p>Для детей 2–3 лет. Развитие высших психических функций, мелкой моторики рук, речи и творческих способностей.</p>
-                                <span class="service-price">40 минут · 20 BYN</span>
+                                <p class="text-lg mb-6 opacity-90 leading-relaxed">Для детей 2-3 лет. Развитие высших психических функций, мелкой моторики рук, речи и творческих способностей.</p>
+                                <div class="inline-block px-5 py-3 w-fit bg-[#F5F8F2] rounded-full text-sm font-semibold text-[#5B8C33]">40 минут • 20 BYN</div>
                             </div>
-                            <div class="route-card-media route-media-fixed">
-                                <img src="images/mum.jpeg" width="1200" height="800" alt="Программа «Хорошо рядом с мамой» для детей 2–3 лет">
+                            <div class="w-full h-[250px] shrink-0 rounded-2xl overflow-hidden bg-[#F5F8F2] relative z-20 shadow-sm">
+                                <img src="images/mum.jpeg" alt="«Хорошо рядом с мамой»" class="absolute inset-0 w-full h-full object-cover">
                             </div>
                         </div>
                     </article>
-                    <article class="route-card route-card-end route-card-shift-lg route-layout-row">
-                        <div class="route-card-face"></div>
-                        <div class="route-card-inner">
-                            <div class="route-card-copy">
-                                <div class="route-title route-title-left">
-                                    <span class="route-dot" data-route-dot></span>
-                                    <h3>«Волшебный мир песка»</h3>
+
+                    <article class="w-full lg:w-[48%] lg:self-end lg:-mt-32 relative group">
+                        <div class="absolute inset-0 bg-white rounded-[2rem] shadow-sm border border-[#E9EFE3] group-hover:shadow-md transition-shadow z-0"></div>
+                        <div class="relative z-20 p-6 md:p-8 flex flex-col md:flex-row gap-8">
+                            <div class="w-full md:flex-1 flex flex-col justify-center">
+                                <div class="flex items-center gap-4 mb-4 relative flex-row">
+                                    <div class="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[#6FAE3E] rounded-full border-4 border-white shadow-sm z-30 -left-6" data-route-dot></div>
+                                    <h3 class="text-[30px] leading-[1.2] font-bold flex-1">«Волшебный мир песка»</h3>
                                 </div>
-                                <p>Для детей 2–12 лет. Стимуляция интеллектуальных и творческих процессов, преодоление негативных эмоций.</p>
-                                <span class="service-price">30 минут · 15 BYN</span>
+                                <p class="text-lg mb-6 opacity-90 leading-relaxed">Для детей 2-12 лет. Стимуляция интеллектуальных и творческих процессов, преодоление негативных эмоций.</p>
+                                <div class="inline-block px-5 py-3 w-fit bg-[#F5F8F2] rounded-full text-sm font-semibold text-[#5B8C33]">30 минут • 15 BYN</div>
                             </div>
-                            <div class="route-card-media">
-                                <img src="images/sand.jpeg" width="1200" height="800" alt="Песочная терапия «Волшебный мир песка» в Гродно">
+                            <div class="w-full h-[250px] md:h-auto md:flex-1 md:min-h-[250px] shrink-0 rounded-2xl overflow-hidden bg-[#F5F8F2] relative z-20 shadow-sm">
+                                <img src="images/sand.jpeg" alt="«Волшебный мир песка»" class="absolute inset-0 w-full h-full object-cover">
                             </div>
                         </div>
                     </article>
-                    <article class="route-card route-card-start route-card-shift route-layout-row-reverse">
-                        <div class="route-card-face"></div>
-                        <div class="route-card-inner">
-                            <div class="route-card-copy">
-                                <div class="route-title route-title-right">
-                                    <span class="route-dot" data-route-dot></span>
-                                    <h3>«Я лучше, чем вчера»</h3>
+
+                    <article class="w-full lg:w-[48%] lg:self-start lg:-mt-12 relative group">
+                        <div class="absolute inset-0 bg-white rounded-[2rem] shadow-sm border border-[#E9EFE3] group-hover:shadow-md transition-shadow z-0"></div>
+                        <div class="relative z-20 p-6 md:p-8 flex flex-col md:flex-row-reverse gap-8">
+                            <div class="w-full md:flex-1 flex flex-col justify-center">
+                                <div class="flex items-center gap-4 mb-4 relative flex-row-reverse">
+                                    <div class="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[#6FAE3E] rounded-full border-4 border-white shadow-sm z-30 -right-6" data-route-dot></div>
+                                    <h3 class="text-[30px] leading-[1.2] font-bold flex-1">«Я лучше, чем вчера»</h3>
                                 </div>
-                                <p>Для детей 5–10 лет. Гармонизация эмоций (тревожности, страхов, агрессии), коррекция поведения, улучшение внимания.</p>
-                                <span class="service-price">45–60 минут · от 20 BYN</span>
+                                <p class="text-lg mb-6 opacity-90 leading-relaxed">Для детей 5-10 лет. Гармонизация эмоций (тревожности, страхов, агрессии), коррекция поведения, улучшение внимания.</p>
+                                <div class="inline-block px-5 py-3 w-fit bg-[#F5F8F2] rounded-full text-sm font-semibold text-[#5B8C33]">45-60 минут • от 20 BYN</div>
                             </div>
-                            <div class="route-card-media">
-                                <img src="images/better.jpeg" width="1200" height="800" alt="Программа «Я лучше, чем вчера» для детей 5–10 лет">
+                            <div class="w-full h-[250px] md:h-auto md:flex-1 md:min-h-[250px] shrink-0 rounded-2xl overflow-hidden bg-[#F5F8F2] relative z-20 shadow-sm">
+                                <img src="images/better.jpeg" alt="«Я лучше, чем вчера»" class="absolute inset-0 w-full h-full object-cover">
                             </div>
                         </div>
                     </article>
-                    <article class="route-card route-card-end route-card-shift-lg route-layout-col-reverse">
-                        <div class="route-card-face"></div>
-                        <div class="route-card-inner">
-                            <div class="route-card-copy">
-                                <div class="route-title route-title-left">
-                                    <span class="route-dot" data-route-dot></span>
-                                    <h3>«Я и мои эмоции»</h3>
+
+                    <article class="w-full lg:w-[48%] lg:self-end lg:-mt-32 relative group">
+                        <div class="absolute inset-0 bg-white rounded-[2rem] shadow-sm border border-[#E9EFE3] group-hover:shadow-md transition-shadow z-0"></div>
+                        <div class="relative z-20 p-6 md:p-8 flex flex-col md:flex-col-reverse gap-8">
+                            <div class="w-full flex flex-col justify-center">
+                                <div class="flex items-center gap-4 mb-4 relative flex-row">
+                                    <div class="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[#6FAE3E] rounded-full border-4 border-white shadow-sm z-30 -left-6" data-route-dot></div>
+                                    <h3 class="text-[30px] leading-[1.2] font-bold flex-1">«Я и мои эмоции»</h3>
                                 </div>
-                                <p>Для детей 4–5 лет. Развитие интеллекта и эмоций, коррекция поведения, развитие коммуникативных навыков.</p>
-                                <span class="service-price">45 минут · 20 BYN</span>
+                                <p class="text-lg mb-6 opacity-90 leading-relaxed">Для детей 4-5 лет. Развитие интеллекта и эмоций, коррекция поведения, развитие коммуникативных навыков.</p>
+                                <div class="inline-block px-5 py-3 w-fit bg-[#F5F8F2] rounded-full text-sm font-semibold text-[#5B8C33]">45 минут • 20 BYN</div>
                             </div>
-                            <div class="route-card-media route-media-fixed">
-                                <img src="images/emotions.jpeg" width="1200" height="800" alt="Программа «Я и мои эмоции» для детей 4–5 лет">
+                            <div class="w-full h-[250px] shrink-0 rounded-2xl overflow-hidden bg-[#F5F8F2] relative z-20 shadow-sm">
+                                <img src="images/emotions.jpeg" alt="«Я и мои эмоции»" class="absolute inset-0 w-full h-full object-cover">
                             </div>
                         </div>
                     </article>
-                    <article class="route-card route-card-start route-card-shift route-layout-row">
-                        <div class="route-card-face"></div>
-                        <div class="route-card-inner">
-                            <div class="route-card-copy">
-                                <div class="route-title route-title-right">
-                                    <span class="route-dot" data-route-dot></span>
-                                    <h3>Индивидуальные консультации</h3>
+
+                    <article class="w-full lg:w-[48%] lg:self-start lg:-mt-12 relative group">
+                        <div class="absolute inset-0 bg-white rounded-[2rem] shadow-sm border border-[#E9EFE3] group-hover:shadow-md transition-shadow z-0"></div>
+                        <div class="relative z-20 p-6 md:p-8 flex flex-col md:flex-row gap-8">
+                            <div class="w-full md:flex-1 flex flex-col justify-center">
+                                <div class="flex items-center gap-4 mb-4 relative flex-row-reverse">
+                                    <div class="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[#6FAE3E] rounded-full border-4 border-white shadow-sm z-30 -right-6" data-route-dot></div>
+                                    <h3 class="text-[30px] leading-[1.2] font-bold flex-1">Индивидуальные консультации</h3>
                                 </div>
-                                <p>Работа с детьми (занятия и диагностика) и взрослыми. Индивидуальный подход к решению психологических запросов.</p>
-                                <span class="service-price">50–60 минут · от 40 до 60 BYN</span>
+                                <p class="text-lg mb-6 opacity-90 leading-relaxed">Работа с детьми (занятия и диагностика) и взрослыми. Индивидуальный подход к решению психологических запросов.</p>
+                                <div class="inline-block px-5 py-3 w-fit bg-[#F5F8F2] rounded-full text-sm font-semibold text-[#5B8C33]">50-60 минут • от 40 до 60 BYN</div>
                             </div>
-                            <div class="route-card-media">
-                                <img src="images/consult.jpeg" width="1200" height="800" alt="Индивидуальная консультация психолога в Гродно">
+                            <div class="w-full h-[250px] md:h-auto md:flex-1 md:min-h-[250px] shrink-0 rounded-2xl overflow-hidden bg-[#F5F8F2] relative z-20 shadow-sm">
+                                <img src="images/consult.jpeg" alt="Индивидуальные консультации" class="absolute inset-0 w-full h-full object-cover">
                             </div>
                         </div>
                     </article>
-                    <article class="route-card route-card-end route-card-shift-lg route-layout-col">
-                        <div class="route-card-face"></div>
-                        <div class="route-card-inner">
-                            <div class="route-card-copy">
-                                <div class="route-title route-title-left">
-                                    <span class="route-dot" data-route-dot></span>
-                                    <h3>Марафон «Я автор своей жизни»</h3>
+
+                    <article class="w-full lg:w-[48%] lg:self-end lg:-mt-32 relative group">
+                        <div class="absolute inset-0 bg-white rounded-[2rem] shadow-sm border border-[#E9EFE3] group-hover:shadow-md transition-shadow z-0"></div>
+                        <div class="relative z-20 p-6 md:p-8 flex flex-col gap-8">
+                            <div class="w-full flex flex-col justify-center">
+                                <div class="flex items-center gap-4 mb-4 relative flex-row">
+                                    <div class="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-[#6FAE3E] rounded-full border-4 border-white shadow-sm z-30 -left-6" data-route-dot></div>
+                                    <h3 class="text-[30px] leading-[1.2] font-bold flex-1">Марафон «Я автор своей жизни»</h3>
                                 </div>
-                                <p>Для взрослых. Осознание ценности своей жизни, расстановка приоритетов. Поиск себя, осознание своих возможностей.</p>
-                                <span class="service-price">6 встреч по 90 мин · 45 BYN</span>
+                                <p class="text-lg mb-6 opacity-90 leading-relaxed">Для взрослых. Осознание ценности своей жизни, расстановка приоритетов. Поиск себя, осознание своих возможностей.</p>
+                                <div class="inline-block px-5 py-3 w-fit bg-[#F5F8F2] rounded-full text-sm font-semibold text-[#5B8C33]">6 встреч по 90 мин • 45 BYN</div>
                             </div>
-                            <div class="route-card-media route-media-fixed">
-                                <img src="images/marathon.jpeg" width="1200" height="800" alt="Марафон «Я автор своей жизни» для взрослых">
+                            <div class="w-full h-[250px] shrink-0 rounded-2xl overflow-hidden bg-[#F5F8F2] relative z-20 shadow-sm">
+                                <img src="images/marathon.jpeg" alt="Марафон «Я автор своей жизни»" class="absolute inset-0 w-full h-full object-cover">
                             </div>
                         </div>
                     </article>
@@ -253,15 +263,15 @@
             </div>
         </section>
 
-        <section id="process" class="process">
-            <div class="container">
+        <section id="process" class="process relative z-20">
+            <div class="container relative z-30">
                 <span class="eyebrow">Как проходит запись</span>
-                <h2>Три шага до первой встречи</h2>
+                <h2 style="font-size: 32px">Три шага до первой встречи</h2>
                 <div class="steps">
                     <div class="step">
                         <div class="num">1</div>
-                        <h3>Звоните или пишете</h3>
-                        <p>По телефону, в Telegram или Viber. Коротко скажите, с чем хотите прийти — этого достаточно.</p>
+                        <h3>Оставляете заявку</h3>
+                        <p>Указываете телефон и коротко описываете запрос — займёт меньше минуты.</p>
                     </div>
                     <div class="step">
                         <div class="num">2</div>
@@ -271,53 +281,102 @@
                     <div class="step">
                         <div class="num">3</div>
                         <h3>Договариваемся о встрече</h3>
-                        <p>Подбираем удобное время под ваш запрос.</p>
+                        <p>Подбираем удобное время и специалиста под ваш запрос.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
+        <section id="reviews" class="relative z-20">
+            <div class="container relative z-30">
+                <div class="reviews-head">
+                    <div>
+                        <span class="eyebrow">Отзывы</span>
+                        <h2 style="font-size: 32px">Что говорят клиенты</h2>
+                    </div>
+                </div>
+                <div class="reviews-empty" style="margin-top: 20px">Отзывы клиентов скоро появятся здесь.</div>
+                <form class="review-form" onsubmit="return false" novalidate>
+                    <h3 style="font-size: 18px; margin-bottom: 16px">Оставить отзыв</h3>
+                    <div class="field">
+                        <label for="rvName">Имя</label>
+                        <input type="text" id="rvName" name="name" placeholder="Как к вам обращаться">
+                    </div>
+                    <div class="field">
+                        <label>Оценка</label>
+                        <div class="star-picker" role="radiogroup" aria-label="Оценка от 1 до 5">
+                            <input type="radio" id="rvStars5" name="stars" value="5"><label for="rvStars5" aria-label="5 звёзд">★</label>
+                            <input type="radio" id="rvStars4" name="stars" value="4"><label for="rvStars4" aria-label="4 звезды">★</label>
+                            <input type="radio" id="rvStars3" name="stars" value="3" checked><label for="rvStars3" aria-label="3 звезды">★</label>
+                            <input type="radio" id="rvStars2" name="stars" value="2"><label for="rvStars2" aria-label="2 звезды">★</label>
+                            <input type="radio" id="rvStars1" name="stars" value="1"><label for="rvStars1" aria-label="1 звезда">★</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="rvText">Отзыв</label>
+                        <textarea id="rvText" name="text" placeholder="Расскажите о вашем опыте"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Отправить отзыв</button>
+                    <p style="font-size: 12px; color: var(--muted); margin: 10px 0 0">Каждый отзыв мы публикуем вручную — это защита от спама и накруток, обычно занимает до суток.</p>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact" class="contact relative z-20">
+            <div class="container relative z-30">
                 <span class="eyebrow">Записаться</span>
-                <h2>Позвоните или напишите — перезвоним</h2>
-                <p class="lede">Заявка на сайте не нужна: достаточно телефона или сообщения. Имя и номер никуда не сохраняются, пока вы сами не напишете.</p>
+                <h2 style="font-size: 32px">Оставьте заявку — перезвоним</h2>
+                <p class="lede">Достаточно телефона и пары слов о запросе. Остальное обсудим по звонку.</p>
                 <div class="contact-grid">
                     <div>
                         <ul class="contact-info-list">
-                            <li>Телефон: <a href="tel:+375297819849">+375 (29) 781-98-49</a>, <a href="tel:+375298828995">+375 (29) 882-89-95</a></li>
-                            <li>Почта: <a href="mailto:loraby@mail.ru">loraby@mail.ru</a></li>
-                            <li>Приём: г. Гродно, ул. Советская, 14, бизнес-центр «Роял», 2 этаж</li>
-                            <li>Instagram: <a href="https://www.instagram.com/centr_stupeni_razvitiya">@centr_stupeni_razvitiya</a></li>
+                            <li>📞 <a href="tel:+375297819849">+375 (29) 781-98-49</a></li>
+                            <li>✉️ <a href="mailto:loraby@mail.ru">loraby@mail.ru</a></li>
+                            <li>📍 ул. Советская, 14, бизнес-центр «Роял», 2 этаж</li>
                         </ul>
-                        <p class="address-note">Юридический и почтовый адрес другой: г. Гродно, ул. Вишневецкая, 16-48. Он указан в подвале и в договоре оферты. На приём приходят на Советскую, 14.</p>
                     </div>
-                    <div class="contact-actions">
-                        <a class="btn btn-primary" href="tel:+375297819849">Позвонить</a>
-                        <a class="btn btn-ghost" href="https://t.me/+375297819849">Написать в Telegram</a>
-                        <a class="btn btn-ghost" href="viber://chat?number=%2B375297819849">Написать в Viber</a>
-                        <a class="btn btn-ghost" href="mailto:loraby@mail.ru">Написать на почту</a>
-                    </div>
+                    <form class="lead-form" onsubmit="return false" novalidate>
+                        <div class="field">
+                            <label for="leadName">Имя</label>
+                            <input type="text" id="leadName" name="name" placeholder="Ваше имя">
+                        </div>
+                        <div class="field">
+                            <label for="leadPhone">Телефон</label>
+                            <input type="tel" id="leadPhone" name="phone" placeholder="+375 29 000-00-00">
+                        </div>
+                        <div class="field">
+                            <label for="leadMessage">Коротко о запросе</label>
+                            <textarea id="leadMessage" name="message" placeholder="Например: хочу записаться на консультацию для подростка"></textarea>
+                        </div>
+                        <div class="consent">
+                            <input type="checkbox" id="leadConsent" name="consentGiven">
+                            <label for="leadConsent">Даю согласие на обработку персональных данных для связи со мной.</label>
+                        </div>
+                        <details class="policy">
+                            <summary>Как используются данные</summary>
+                            <p>Имя, телефон и текст заявки используются только для того, чтобы связаться с вами и договориться о консультации. Данные не передаются третьим лицам.</p>
+                        </details>
+                        <button type="submit" class="btn btn-primary btn-block" style="margin-top: 8px">Отправить заявку</button>
+                    </form>
                 </div>
-            </div>
-        </section>
-
-        <section class="process">
-            <div class="container">
-                <span class="eyebrow">Документы</span>
-                <h2>Договор публичной оферты</h2>
-                <p class="lede">Условия оказания психологических услуг, порядок расчётов и правила переноса консультаций.</p>
-                <a href="offer/" class="btn btn-ghost">Читать договор оферты</a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container footer-row">
+    <section id="offer" class="process relative z-20" style="border-top: none">
+        <div class="container relative z-30">
+            <span class="eyebrow">Документы</span>
+            <h2 style="font-size: 32px">Договор публичной оферты</h2>
+            <p class="lede">Ознакомьтесь с официальными условиями оказания психологических услуг, порядком расчетов и правилами переноса консультаций.</p>
+            <a href="offer/" class="btn btn-ghost" style="margin-top: 12px">Читать договор оферты</a>
+        </div>
+    </section>
+
+    <footer class="relative z-20">
+        <div class="container footer-row relative z-30">
             <div class="footer-requisites">
                 <p>ИП Глазкова Лариса Сергеевна · УНП 590891765</p>
                 <p>Юридический и почтовый адрес: г. Гродно, ул. Вишневецкая, 16-48</p>
-                <p>Место приёма: г. Гродно, ул. Советская, 14, бизнес-центр «Роял», 2 этаж</p>
                 <p>ОАО «БанкБелВЭБ» · р/с BY18 BELB 3013 0007 1L00 1022 6000 · БИК BELBBY2X</p>
                 <p>Тел. +375 (29) 781-98-49 · <a href="mailto:loraby@mail.ru">loraby@mail.ru</a></p>
             </div>
