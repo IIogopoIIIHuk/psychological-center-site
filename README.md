@@ -2,7 +2,7 @@
 
 Статический сайт-визитка психологического центра в Гродно. Страницы — обычные HTML-файлы, свой сервер и база не нужны. Хостинг: GitHub Pages.
 
-Живой адрес: https://iiogopoiiihuk.github.io/psychological-center-site/
+Живой адрес: https://glazkova.by/
 
 На сайте остаются услуги, цены, контакты, телефоны, Telegram, Viber, почта и договор оферты. Запись идёт звонком или сообщением. Админка, CRM, форма заявки и своя аналитика сюда не входят: им нужен постоянно работающий сервер.
 
@@ -21,10 +21,6 @@
 
 По имени центра сайт обычно находится после индексации. Запросы вроде «детский психолог Гродно» сильнее зависят от карточек в картах, чем от одной страницы.
 
-## Домен stupeni-razvitiya.by
+## Домен glazkova.by
 
-Сейчас канонический адрес — адрес GitHub Pages, потому что домен `.by` ещё не открывается. Когда домен будет куплен:
-
-1. В настройках репозитория, Pages, добавить пользовательский домен `stupeni-razvitiya.by`.
-2. У регистратора домена создать запись CNAME для `www` на `iiogopoiiihuk.github.io` и записи A для корня на адреса GitHub Pages из [документации](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
-3. Заменить `https://iiogopoiiihuk.github.io/psychological-center-site` на `https://stupeni-razvitiya.by` в `index.html`, `offer/index.html`, `sitemap.xml` и `robots.txt`.
+Канонический адрес — `https://glazkova.by/`. У регистратора для корня нужны четыре записи A на `185.199.108.153`, `185.199.109.153`, `185.199.110.153` и `185.199.111.153`, а для `www` — CNAME на `iiogopoiiihuk.github.io`. Файл `CNAME` в репозитории указывает GitHub Pages на этот домен.

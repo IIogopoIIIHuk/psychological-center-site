@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iiogopoiiihuk.github.io/psychological-center-site/sitemap.xml
+Sitemap: https://glazkova.by/sitemap.xml
